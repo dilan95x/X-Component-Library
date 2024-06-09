@@ -1,4 +1,4 @@
-
+import React from "react";
 import { faDollar, faPercent } from "@fortawesome/free-solid-svg-icons";
 import CUSTOMButton from "./CUSTOMButton";
 import CUSTOMFormField from "./CUSTOMFormField";

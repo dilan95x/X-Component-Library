@@ -5,9 +5,10 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import packageJson from "./package.json" assert { type: "json" };
 
+
 export default [
   {
-    input: "src/index.ts",
+    input: "src/index.tsx",
     output: [
       {
         file: packageJson.main,
