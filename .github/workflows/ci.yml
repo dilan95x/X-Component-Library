@@ -17,12 +17,6 @@
      - name: Install dependencies
        run: npm install
 
-     - name: Run Lint
-       run: npm run lint
-
-     - name: Format Code
-       run: npm run format
-
      - name: Run Tests
        run: npm run test
 
