@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
 
     "maxNodeModuleJsDepth": 1 /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */,
 
@@ -31,5 +31,5 @@
     "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
     "allowUnreachableCode": false /* Disable error reporting for unreachable code. */
   },
-  "include": ["react-app-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["react-app-env.d.ts", "**/*.ts", "**/*.tsx", "tests/**/*", "**/*.test.tsx", "jest.setup.d.ts"]
 }
