@@ -18,9 +18,10 @@
     "coverage": "npm t -- --coverage --watchAll=false --collectCoverageFrom='src/**/*.{ts,tsx}' --collectCoverageFrom='!src/**/*.{types,stories,constants,test,spec}.{ts,tsx}'",
     "build": "rollup -c -w",
     "start": "storybook dev -p 6006",
-    "test": "jest --watchAll --verbose",
+    "test": "jest",
     "build-storybook": "storybook build",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "chromatic": "npx chromatic --project-token=chpt_adc30bd9817d3a6"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -54,7 +55,9 @@
     "type": "git",
     "url": "git+https://github.com/dilan95x/X-Component-Library.git"
   },
-  "author": "Dillan95x",
+  "author": {
+    "name": "Dillan95x"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dilan95x/X-Component-Library/issues"
@@ -79,6 +82,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.2",
     "@types/testing-library__jest-dom": "^6.0.0",
+    "chromatic": "^11.5.3",
     "globals": "^15.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
