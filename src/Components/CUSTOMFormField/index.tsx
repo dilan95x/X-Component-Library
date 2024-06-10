@@ -8,13 +8,13 @@ import { CUSTOMFormFieldProps } from "../types/CUSTOMFormFieldProps.types";
 import { CUSTOMFormField } from "./CUSTOMFormField";
 
 function Index(props: CUSTOMFormFieldProps) {
-  const { colorVariant = "#0163CC", styleVariant = "default", label = "Label" } = props;
+  const { colorvariant = "#0163CC", stylevariant = "default", label = "Label" } = props;
 
   const { isHover, onMouseEnter, onMouseLeave } = useHoverChecker();
   const { focused, handleBlur, handleFocus } = useFocusChecker();
   const { value, fromHandleChange } = useFromHandleChange();
 
-  const commonBorderColor = focused ? colorVariant : isHover ? "black" : "#a9a6ab";
+  const commonBorderColor = focused ? colorvariant : isHover ? "black" : "#a9a6ab";
 
   const { inputStyle, containerStyle, labelStyle, startIconStyle, endIconStyle } = useFormFieldStyles({
     ...props,
@@ -25,7 +25,7 @@ function Index(props: CUSTOMFormFieldProps) {
 
   return (
     <div style={containerStyle}>
-      {styleVariant === "default" && (
+      {stylevariant === "default" && (
         <label htmlFor={props.name} style={labelStyle}>
           {label}
         </label>
@@ -42,7 +42,7 @@ function Index(props: CUSTOMFormFieldProps) {
         fromHandleChange={fromHandleChange}
         {...props}
       />
-      {styleVariant === "simple" && <label style={labelStyle}>{label}</label>}
+      {stylevariant === "simple" && <label style={labelStyle}>{label}</label>}
     </div>
   );
 }

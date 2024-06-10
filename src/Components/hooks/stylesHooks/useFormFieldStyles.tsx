@@ -9,8 +9,8 @@ interface Props extends CUSTOMFormFieldProps {
 
 export function useFormFieldStyles(props: Props) {
   const {
-    colorVariant = "#0163CC",
-    styleVariant = "default",
+    colorvariant = "#0163CC",
+    stylevariant = "default",
     startIcon = null,
     endIcon = null,
     disabled = false,
@@ -24,14 +24,15 @@ export function useFormFieldStyles(props: Props) {
   const inputStyle: React.CSSProperties = {
     width: fieldwidth,
     height,
-    padding: styleVariant === "default" ? "0.6rem" : ".99rem .625rem .5rem 0",
+    backgroundColor:  stylevariant === "default" ? "#fff" : "transparent",
+    padding: stylevariant === "default" ? "0.6rem" : ".99rem .625rem .5rem 0",
     paddingLeft: startIcon ? "2rem" : "0.6rem",
     paddingRight: endIcon ? "1.8rem" : "0.6rem",
     fontSize: "1rem",
-    border: styleVariant === "default" ? `0.13rem solid ${commonBorderColor}` : "none",
+    border: stylevariant === "default" ? `0.13rem solid ${commonBorderColor}` : "none",
     borderBottom: `0.13rem solid ${commonBorderColor}`,
     borderRadius: "0.2rem",
-    outline: styleVariant === "default" ? "visible" : "none",
+    outline: stylevariant === "default" ? "visible" : "none",
     transition: "border-color 0.2s",
     boxSizing: "border-box",
     marginBottom: "1.25rem",
@@ -49,11 +50,11 @@ export function useFormFieldStyles(props: Props) {
   };
 
   const labelStyle: React.CSSProperties = {
-    position: styleVariant === "default" ? "initial" : "absolute",
-    top: styleVariant === "simple" && startIcon ? "0" : focused || value ? "0" : "50%",
+    position: stylevariant === "default" ? "initial" : "absolute",
+    top: stylevariant === "simple" && startIcon ? "0" : focused || value ? "0" : "50%",
     left: "0",
     transform:
-      styleVariant === "default"
+      stylevariant === "default"
         ? "none"
         : startIcon || endIcon
           ? focused || value
@@ -62,8 +63,8 @@ export function useFormFieldStyles(props: Props) {
           : focused || value
             ? "translateY(-50%)"
             : "translateY(-50%)",
-    fontSize: styleVariant === "default" ? "0.8rem" : focused || value ? "0.8rem" : "0.75rem",
-    color: focused || value ? colorVariant : "#aaa",
+    fontSize: stylevariant === "default" ? "0.8rem" : focused || value ? "0.8rem" : "0.75rem",
+    color: focused || value ? colorvariant : "#aaa",
     pointerEvents: "none",
     transition: "all 0.2s",
   };
@@ -73,7 +74,7 @@ export function useFormFieldStyles(props: Props) {
     top: "35%",
     transform: "translateY(-50%)",
     pointerEvents: "none",
-    color: value || focused ? colorVariant : "#898989",
+    color: value || focused ? colorvariant : "#898989",
   };
 
   const startIconStyle: React.CSSProperties = {

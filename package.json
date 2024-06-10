@@ -1,6 +1,6 @@
 {
-  "name": "x-component-library",
-  "version": "1.0.0",
+  "name": "@dilan95x/x-component-library",
+  "version": "1.1.1",
   "description": "simple library of React components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/dilan95x/X-Component-Library#readme",
   "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7",
     "@chromatic-com/storybook": "^1.5.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@storybook/addon-essentials": "^8.1.6",
@@ -40,6 +41,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.1.6",
     "tslib": "^2.6.3"
