@@ -15,21 +15,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "types": ["node", "jest", "@testing-library/jest-dom"],
-
-    "maxNodeModuleJsDepth": 1 /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */,
-
-    /* Emit */
-    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
-    "emitDeclarationOnly": true /* Only output d.ts files and not JavaScript files. */,
-    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
-    "outDir": "dist" /* Specify an output folder for all emitted files. */,
-    "declarationDir": "types" /* Specify the output directory for generated declaration files. */,
-
-    "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
-    "noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
-    "noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
-    "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
-    "allowUnreachableCode": false /* Disable error reporting for unreachable code. */
+    "maxNodeModuleJsDepth": 1,
+    "declaration": true ,
+    "emitDeclarationOnly": true,
+    "sourceMap": true ,
+    "outDir": "dist",
+    "declarationDir": "types",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false
   },
   "include": ["react-app-env.d.ts", "**/*.ts", "**/*.tsx", "tests/**/*", "**/*.test.tsx", "jest.setup.d.ts"]
 }
