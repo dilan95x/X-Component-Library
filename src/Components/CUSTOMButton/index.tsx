@@ -1,3 +1,4 @@
+import React from "react";
 import { CUSTOMButtonProps } from "../types/CUSTOMButtonProps.types";
 import { useHoverChecker } from "../hooks/useHoverChecker";
 import { useButtonStyles } from "../hooks/stylesHooks/useButtonStyles";

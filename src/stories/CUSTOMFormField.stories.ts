@@ -24,7 +24,7 @@ export const OutlinedFormField: FormFieldStory = {
     label: "Custom Label",
     fieldwidth: "15rem",
     onChange: handleChange,
-    styleVariant: "simple",
+    stylevariant: "simple",
   },
 };
 
@@ -34,7 +34,7 @@ export const OutlinedFormFieldDisabled: FormFieldStory = {
     fieldwidth: "15rem",
     onChange: handleChange,
     disabled: true,
-    styleVariant: "simple",
+    stylevariant: "simple",
   },
 };
 
@@ -44,7 +44,7 @@ export const OutlinedFormFieldWithStartIcon: FormFieldStory = {
     fieldwidth: "15rem",
     onChange: handleChange,
     startIcon: faUser,
-    styleVariant: "simple",
+    stylevariant: "simple",
   },
 };
 
@@ -54,7 +54,7 @@ export const OutlinedFormFieldWithEndIcon: FormFieldStory = {
     fieldwidth: "15rem",
     onChange: handleChange,
     endIcon: faUser,
-    styleVariant: "simple",
+    stylevariant: "simple",
   },
 };
 

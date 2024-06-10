@@ -12,7 +12,7 @@ export function useButtonStyles(props: Props) {
     disabled,
     color,
     isHover,
-    btnstyle,
+    btnstyle='contained',
     textcolor,
     width,
     size = "md",
@@ -28,8 +28,8 @@ export function useButtonStyles(props: Props) {
         : btnstyle === "contained"
           ? color
           : isHover
-            ? hexToRgba(color ?? "", 0.05)
-            : "transparent",
+          ? hexToRgba(color ?? "", 0.20)
+          : hexToRgba(color ?? "", 0.10),
     border: loading || disabled ? "none" : btnstyle === "contained" ? "none" : `0.0006rem solid ${color}`,
     filter: isHover ? "brightness(0.9)" : "brightness(1)",
     opacity: disabled || loading ? 0.5 : 1,

@@ -1,8 +1,8 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export type CUSTOMFormFieldProps = {
-  colorVariant?: string;
-  styleVariant?: "default" | "simple";
+  colorvariant?: string;
+  stylevariant?: "default" | "simple";
   label?: string;
   startIcon?: IconProp | null;
   endIcon?: IconProp | null;
