@@ -1,6 +1,8 @@
  name: 'Components Library CI'
  on:
     push:
+      branches:
+        - main
     pull_request:
  jobs:
   build:
