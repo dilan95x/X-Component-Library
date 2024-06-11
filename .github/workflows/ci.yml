@@ -30,7 +30,7 @@
          publish_dir: ./storybook-static
          publish_branch: gh-pages
      
-     - name: Configure npm for publishing
+     - name: Config npm for publishing
        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
      - name: Build the package
