@@ -36,19 +36,14 @@
      - name: Get published version from npm
        id: get_published_version
        run: |
-        # Retrieve the published version from npm
         PUBLISHED_VERSION=$(npm show $(node -p -e "require('./package.json').name") version || echo '0.0.0')
-        # Set the environment variable using $GITHUB_ENV
         echo "PUBLISHED_VERSION=$PUBLISHED_VERSION" >> $GITHUB_ENV
  
      - name: Check if version is updated
        id: check_version
        run: |
-        # Get the current version from package.json
         VERSION=$(node -p -e "require('./package.json').version")
-        # Calculate the value of SHOULD_PUBLISH based on version comparison
         SHOULD_PUBLISH=$(node -e "const semver = require('semver'); process.stdout.write(semver.gt(process.env.VERSION, process.env.PUBLISHED_VERSION));")
-        # Set the environment variable using $GITHUB_ENV
         echo "SHOULD_PUBLISH=$SHOULD_PUBLISH" >> $GITHUB_ENV
  
      - name: Config npm for publishing
