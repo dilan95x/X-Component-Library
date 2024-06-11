@@ -1,5 +1,4 @@
  # Getting started
-
 [![npm version](https://img.shields.io/npm/v/@dilan95x/x-component-library.svg?style=flat-square)](https://www.npmjs.com/package/@dilan95x/x-component-library)
 
  
