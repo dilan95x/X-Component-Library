@@ -8,8 +8,6 @@ const submit = (e: React.FormEvent<HTMLFormElement>) => {
   const form = e.target as HTMLFormElement;
   const formData = new FormData(form);
   const data = convertFormDataToObject(formData);
-  console.log(`Event: ${e}`);
-  console.log(`Form Data ${data}`);
   const subTotal = (Number(data.price) || 0) * Number(data.quantity);
   const discount = (subTotal * (Number(data.discount) || 0)) / 100;
   const total = subTotal - discount;

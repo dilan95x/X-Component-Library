@@ -16,6 +16,7 @@ export default meta;
 type FormFieldStory = StoryObj<typeof CUSTOMFormField>;
 
 const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // these console added for user tester to check
   console.log(`Value Changed: ${e.target.value}`);
 };
 
