@@ -1,0 +1,377 @@
+import { Meta } from "@storybook/blocks";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { CUSTOMButton, CUSTOMFormField, CUSTOMForm } from "../index"; 
+ 
+
+export const RightArrow = () => (
+  <svg
+    viewBox="0 0 14 14"
+    width="8px"
+    height="14px"
+    style={{
+      marginLeft: "4px",
+      display: "inline-block",
+      shapeRendering: "inherit",
+      verticalAlign: "middle",
+      fill: "currentColor",
+      "path fill": "currentColor",
+    }}
+  >
+    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+  </svg>
+);
+
+export const ButtonApiLink = () => (
+  <a
+    href="http://localhost:6006/?path=/docs/stories-custombutton--docs/"
+    rel="noopener noreferrer"
+  >
+    Buttons API
+    <RightArrow />
+  </a>
+);
+
+export const FormFieldApiLink = () => (
+  <a
+    href="http://localhost:6006/?path=/docs/stories-customformfield--docs/"
+    rel="noopener noreferrer"
+  >
+    Form Field API
+    <RightArrow />
+  </a>
+);
+
+export const FormApiLink = () => (
+  <a
+    href="http://localhost:6006/?path=/docs/stories-customform--docs/"
+    rel="noopener noreferrer"
+  >
+    Forms
+    <RightArrow />
+  </a>
+);
+
+
+<Meta title="Getting started" />
+
+{/* Installation */}
+
+<div className="sb-container">
+  <div className="sb-section-title"># Getting started</div>
+</div>
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+    # Installation
+    Install X Component library.
+
+     <h4 className="sb-section-item-heading">Default installation</h4>
+     Run the following command to add X Component library to your project.
+
+```sh
+npm install @dilan95x/x-component-library
+```
+
+<h4 className="sb-section-item-heading">Peer dependencies</h4>
+Please note that <b>react</b> and <b>react-dom</b> are peer dependencies,
+meaning you should ensure they are installed before installing X Component
+library.
+
+```sh
+"peerDependencies": {
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1"
+}
+```
+
+<h4 className="sb-section-item-heading">Icons</h4>
+To use the start or end icons inside Button or Form components, you must first
+install the Font Awesome Icons. You can do so with npm.
+
+```sh
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/react-fontawesome
+```
+
+ </div> 
+</div>
+
+{/* Components */}
+<div className="sb-container">
+  <div className='sb-section-title'>
+
+    # Components
+    X Component library aims to provide building blocks to create user interfaces using the X Component API guidelines as a reference.
+
+{/* Button */}
+  <div className="single-component-section">
+     <h4 className="sb-section-item-heading">Button</h4>
+     Create a simple, highly customizable button with the CUSTOMButton component.
+
+```sh
+import { CUSTOMButton } from "@dilan95x/x-component-library";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+<CUSTOMButton size="lg" color="#1900ff" btnstyle="outlined" startIcon={faCheck} >custom button</CUSTOMButton>
+<CUSTOMButton size="lg" color="blue" textcolor="white" btnstyle="contained" endIcon={faCheck} >custom button</CUSTOMButton>
+```
+<div style={{ display: "flex", justifyContent: "center", width: "100%", gap: "20px" }}>
+<CUSTOMButton size="lg" color="#1900ff" btnstyle="outlined" startIcon={faCheck} >custom button</CUSTOMButton>
+<CUSTOMButton size="lg" color="blue" textcolor="white" btnstyle="contained" endIcon={faCheck} >custom button</CUSTOMButton>
+</div>
+<br></br>
+
+ Get started with X Component's CUSTOMButton through Our API documentation for more information. <ButtonApiLink/><br></br>
+ </div> 
+
+
+{/* Form Field */}
+<div className="single-component-section">
+
+     <h4 className="sb-section-item-heading">Form Field</h4>
+     Create a simple, highly customizable Form Felid with the CUSTOMFormField component.
+
+```sh
+import { CUSTOMFormField } from "@dilan95x/x-component-library";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+<CUSTOMFormField  colorvariant="#000000" stylevariant="default" label="Label" startIcon={faCheck} type="text" />
+<CUSTOMFormField  colorvariant="#000000" stylevariant="simple" label="Label" endIcon={faCheck} type="text"/>
+```
+<div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", gap: "20px" }}>
+<CUSTOMFormField  colorvariant="#000000" stylevariant="default" label="Label" startIcon={faCheck} type="text" />
+<CUSTOMFormField  colorvariant="#000000" stylevariant="simple" label="Label" endIcon={faCheck} type="text"/>
+</div>
+<br></br>
+
+ Get started with X Component's CUSTOMFormField through Our API documentation for more information. <FormFieldApiLink/><br></br>
+ </div> 
+
+
+{/* Form */}
+ <div className="single-component-section">
+
+     <h4 className="sb-section-item-heading">Create Forms using "CUSTOMFormField" and "CUSTOMButton" components.</h4>
+      This is a exsample code.
+
+```sh
+import { faDollar, faPercent } from "@fortawesome/free-solid-svg-icons";
+import CUSTOMButton from "@dilan95x/x-component-library";
+import CUSTOMFormField from "@dilan95x/x-component-library";
+
+const Form = () => {
+
+  return (
+    <div style={"your custom style"} >
+      <form
+        style={"your custom style"}
+        onSubmit={(e) => alert(`Event: $${e}`)}
+      >
+        <CUSTOMFormField label="Price" type="number" fieldwidth={width} name="price" startIcon={faDollar} />
+        <CUSTOMFormField label="Qty" type="number" fieldwidth={width} name="quantity" />
+        <CUSTOMFormField
+          label="Discount(for total items)"
+          type="number"
+          fieldwidth={"width"}
+          name="discount"
+          endIcon={faPercent}
+        />
+        <span style={{ marginTop: "1rem" }} >
+          <CUSTOMButton type="submit">Submit</CUSTOMButton >
+        </span>
+      </form>
+    </div>
+  );
+};
+
+export default Form
+
+```
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", gap: "20px" }}>
+<CUSTOMForm
+colorvariant="#000000"
+stylevariant="default"
+label="Label"
+startIcon={faCheck}
+type="text"
+onSubmit={(e) =>  alert(`Event: $${e}`) }
+               />
+</div>
+<br></br> 
+ </div> 
+
+ </div>  
+</div>
+
+{/* API */}
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+    # APi
+    See the documentations below for a complete reference to all of the props and classes available to the components mentioned here.
+<ButtonApiLink/><br></br>
+<FormFieldApiLink/><br></br>
+<FormApiLink/><br></br>
+
+  </div> 
+</div>
+
+<style>
+  {`
+  .sb-container {
+    margin-bottom: 48px;
+  }
+
+  .sb-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .sb-section-title {
+    margin-bottom: 32px;
+  }
+
+  .sb-section a:not(h1 a, h2 a, h3 a) {
+    font-size: 14px;
+  }
+
+  .sb-section-item, .sb-grid-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sb-section-item-heading {
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
+    margin: 0 !important;
+  }
+  .sb-section-item-paragraph {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .sb-chevron {
+    margin-left: 5px;
+  }
+
+  .sb-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 20px;
+  }
+
+  .sb-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sb-socials p {
+    margin-bottom: 10px;
+  }
+
+  .sb-explore-image {
+    max-height: 32px;
+    align-self: flex-start;
+  }
+
+  .sb-addon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #EEF3F8;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #EEF3F8;
+    height: 180px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .sb-addon-text {
+    padding-left: 48px;
+    max-width: 240px;
+  }
+
+  .sb-addon-text h4 {
+    padding-top: 0px;
+  }
+
+  .sb-addon-img {
+    position: absolute;
+    left: 345px;
+    top: 0;
+    height: 100%;
+    width: 200%;
+    overflow: hidden;
+  }
+
+  .sb-addon-img img {
+    width: 650px;
+    transform: rotate(-15deg);
+    margin-left: 40px;
+    margin-top: -72px;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+    backface-visibility: hidden;
+  }
+
+  @media screen and (max-width: 800px) {
+    .sb-addon-img {
+      left: 300px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .sb-section {
+      flex-direction: column;
+    }
+
+    .sb-features-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sb-socials {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sb-addon {
+      height: 280px;
+      align-items: flex-start;
+      padding-top: 32px;
+      overflow: hidden;
+    }
+
+    .sb-addon-text {
+      padding-left: 24px;
+    }
+
+    .sb-addon-img {
+      right: 0;
+      left: 0;
+      top: 130px;
+      bottom: 0;
+      overflow: hidden;
+      height: auto;
+      width: 124%;
+    }
+
+    .sb-addon-img img {
+      width: 1200px;
+      transform: rotate(-12deg);
+      margin-left: 0;
+      margin-top: 48px;
+      margin-bottom: -40px;
+      margin-left: -24px;
+    }
+  }
+  `}
+</style>
