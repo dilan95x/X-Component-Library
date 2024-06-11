@@ -16,7 +16,7 @@
     "format": "prettier --write src/**/*.{ts,tsx}",
     "tsbuild": "tsc",
     "coverage": "npm t -- --coverage --watchAll=false --collectCoverageFrom='src/**/*.{ts,tsx}' --collectCoverageFrom='!src/**/*.{types,stories,constants,test,spec}.{ts,tsx}'",
-    "build": "rollup -c -w",
+    "build": "rollup -c",
     "start": "storybook dev -p 6006",
     "test": "jest",
     "build-storybook": "storybook build",
