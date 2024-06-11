@@ -31,7 +31,6 @@
          publish_branch: gh-pages
      
      - name: Extract version
-       id: extract_version
        run: bash extract_version.sh
  
      - name: Get published version from npm
@@ -40,18 +39,19 @@
  
      - name: Check if version is updated
        id: check_version
-       run: echo "::set-output name=should_publish::$(node -p -e "require('semver').gt('${{ steps.extract_version.outputs.version }}', '${{ steps.get_published_version.outputs.stdout }}')")"
+       run: SHOULD_PUBLISH=$(node -p -e "require('semver').gt(process.env.VERSION, '${{ steps.get_published_version.outputs.stdout }}')")
+          echo "SHOULD_PUBLISH=$SHOULD_PUBLISH" >> $GITHUB_ENV
  
      - name: Config npm for publishing
-       if: steps.check_version.outputs.should_publish == 'true'
+       if: env.SHOULD_PUBLISH == 'true'
        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
  
      - name: Build the package
-       if: steps.check_version.outputs.should_publish == 'true'
+       if: env.SHOULD_PUBLISH == 'true'
        run: npm run build
  
      - name: Publish to npm
-       if: steps.check_version.outputs.should_publish == 'true'
+       if: env.SHOULD_PUBLISH == 'true'
        run: npm publish --access public
        env:
-           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
