@@ -1,6 +1,6 @@
 {
   "name": "@dilan95x/x-component-library",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "simple library of React components",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
