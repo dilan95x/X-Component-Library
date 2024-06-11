@@ -1,8 +1,8 @@
+ # Getting started
 
-<Meta title="Getting started" /> 
-<div className="sb-container">
-  <div className="sb-section-title"># Getting started</div>
-</div>
+[![npm version](https://img.shields.io/npm/v/@dilan95x/x-component-library.svg?style=flat-square)](https://www.npmjs.com/package/@dilan95x/x-component-library)
+
+ 
 
 <div className="sb-container">
   <div className='sb-section-title'> 
